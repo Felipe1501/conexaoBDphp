@@ -64,7 +64,42 @@
                     </div>
                 </div>
                 <div class="input-group">
+                <?php
+                    include_once('conexao.php');
+                    try{
+                        $select = $connection->prepare('SELECT * FROM tb_usuario');
+                        $select->execute();
 
+                        while($row = $select->fetch())
+                        {
+                            echo "<p>";
+                            echo "<br><b>CÓDIGO: </b>".$row['cd_usuario'];
+                            echo "<br><b>NOME: </b>".$row['nm_primeiro'];
+                            echo "<br><b>SOBRENOME: </b>".$row['nm_sobrenome'];
+                            echo "<br><b>PERFIL: </b>".$row['id_perfil'];
+                            echo "<br><b>EMAIL: </b>".$row['nm_email'];
+                            echo "<br><b>ENDEREÇO: </b>".$row['nr_endereco'];
+                            echo "<br><b>CELULAR: </b>".$row['nr_celular'];
+                            echo "<br><b>NOME USUÁRIO: </b>".$row['nm_usuario'];
+                            echo "<br><b>GÊNERO: </b>".$row['id_genero'];
+                            echo "</p><br>";
+                            ?>
+                            <button onclick="window.location.href='alterarProduto.php?id=<?php echo $row['cd_usuario'];?>'">
+                            Alterar
+                        </button>
+
+                        <button onclick="window.location.href='excluirProduto.php?id=<?php echo $row['cd_usuario'];?>'">
+                            Excluir
+                        </button>
+	                    <hr>
+                        <?php
+                        }
+                    }
+                    catch(PDOException $e){
+                        echo 'ERROR: ' . $e->getMessage();
+                    }
+                
+                ?>
             
                 </div>
         </div>

@@ -65,7 +65,48 @@
                     </div>
                 </div>
                 <div class="input-group">
+                <?php
+                    include_once('conexao.php');
+                    try{
+                        $select = $connection->prepare('SELECT * FROM tb_funcionario');
+                        $select->execute();
 
+                        while($row = $select->fetch())
+                        {
+                            echo "<p>";
+                            echo "<br><b>CÓDIGO: </b>".$row['cd_funcionario'];
+                            echo "<br><b>NOME: </b>".$row['nm_primeiro'];
+                            echo "<br><b>SOBRENOME: </b>".$row['nm_sobrenome'];
+                            echo "<br><b>DATA NASCIMENTO: </b>".$row['dt_nasc'];
+                            echo "<br><b>CPF: </b>".$row['nr_cpf'];
+                            echo "<br><b>RG: </b>".$row['nr_rg'];
+                            echo "<br><b>CEP: </b>".$row['nr_cep'];
+                            echo "<br><b>ENDEREÇO: </b>".$row['nr_endereco'];
+                            echo "<br><b>PAIS: </b>".$row['nm_pais'];
+                            echo "<br><b>CELULAR: </b>".$row['nr_celular'];
+                            echo "<br><b>EMAIL: </b>".$row['nm_email'];
+                            echo "<br><b>GÊNERO: </b>".$row['id_genero'];
+                            echo "</p><br>";
+                            ?>
+                            <div class="login-button">
+
+                                <button onclick="window.location.href='alterarFuncionario.php?id=<?php echo $row['cd_funcionario'];?>'">
+                                Alterar
+                            </button>
+    
+                            <button onclick="window.location.href='excluirFuncionario.php?id=<?php echo $row['cd_funcionario'];?>'">
+                                Excluir
+                            </button>
+                            </div>
+	                    <hr>
+                        <?php
+                        }
+                    }
+                    catch(PDOException $e){
+                        echo 'ERROR: ' . $e->getMessage();
+                    }
+                
+                ?>
                 </div>
    
         </div>

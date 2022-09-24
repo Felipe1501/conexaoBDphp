@@ -52,13 +52,13 @@
 <body>
     <div class="container">
         <div class="form-img">
-            <img src="assets/img/undraw_forms_re_pkrt.svg" >
+            <img src="assets/img/undraw_throw_away_re_x60k.svg" >
         </div>
         <div class="form">
 
                 <div class="form-header">
                     <div class="title">
-                        <h1>CONSULTA CLIENTES</h1>
+                        <h1>EXCLUIR CLIENTE</h1>
                     </div>
                     <div class="login-button">
                         <button onclick="javascript:location.href ='../../menu.php';"><a href="#">VOLTAR</a></button>
@@ -66,12 +66,16 @@
                 </div>
                 <div class="input-group">
                 <?php
-                    include_once('conexao.php');
-                    try{
-                        $select = $connection->prepare('SELECT * FROM tb_cliente');
-                        $select->execute();
 
-                        while($row = $select->fetch())
+
+                    $cod = $_GET['id'];
+                    
+                    include_once('conexao.php');
+                    
+                        $select = $connection->prepare("SELECT * FROM tb_cliente where cd_cliente=$cod");
+                        $select->execute();
+                    
+                        while($row = $select->fetch()) 
                         {
                             echo "<p>";
                             echo "<br><b>CÓDIGO: </b>".$row['cd_cliente'];
@@ -84,29 +88,20 @@
                             echo "<br><b>CELULAR: </b>".$row['nr_celular'];
                             echo "<br><b>EMAIL: </b>".$row['nm_email'];
                             echo "<br><b>GÊNERO: </b>".$row['id_genero'];
-                            echo "</p><br>";
-                            ?>
-                            <button onclick="window.location.href='alterarCliente.php?id=<?php echo $row['cd_cliente'];?>'">
-                            Alterar
-                        </button>
+                            echo "</p>";
+                ?>
+                    
+                    <button onclick="window.location.href='confirmarExcluirCliente.php?id=<?php echo $row['cd_cliente'];?>'">
+                        Excluir
+                    </button>
+                    
+                    <button onclick="window.location.href='consultaCliente.php'">Voltar</button>
 
-                        <button onclick="window.location.href='excluirCliente.php?id=<?php echo $row['cd_cliente'];?>'">
-                            Excluir
-                        </button>
-                        <button onclick="window.location.href='../../menu.php'">Voltar</button>
-	                    <hr>
-                        <?php
+                <?php
                         }
-                    }
-                    catch(PDOException $e){
-                        echo 'ERROR: ' . $e->getMessage();
-                    }
-                
                 ?>
                 </div>
 
-                
-                
 
         </div>
     </div>

@@ -82,6 +82,7 @@
                             echo "<br><b>PRODUTO: </b>".$row['tp_produto'];
                             echo "<br><b>CEP: </b>".$row['nr_cep'];
                             echo "<br><b>ENDEREÇO: </b>".$row['nr_endereco'];
+                            echo "<br><b>PAIS: </b>".$row['nm_pais'];
                             echo "<br><b>CELULAR: </b>".$row['nr_celular'];
                             echo "<br><b>EMAIL: </b>".$row['nm_email'];
                             echo "<br><b>GÊNERO: </b>".$row['id_genero'];
