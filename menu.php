@@ -22,11 +22,11 @@
                     </div>
 
                     <ul class="nav_links">
-                        <li><a href="conexaoBDphp/Felipeforms/consultaCliente.php">CLIENTE</a></li>
-                        <li><a href="conexaoBDphp/Felipeforms/consultaFuncionario.php">FUNCIONÁRIO</a></li>
-                        <li><a href="conexaoBDphp/Felipeforms/consultaFornecedor.php">FORNECEDOR</a></li>
-                        <li><a href="conexaoBDphp/Felipeforms/consultaProduto.php">PRODUTO</a></li>
-                        <li><a href="conexaoBDphp/Felipeforms/consultaUsuario.php">USUÁRIO</a></li>
+                        <li><a href="conexaoBDphp/Felipeforms/clientes/consultaCliente.php">CLIENTE</a></li>
+                        <li><a href="conexaoBDphp/Felipeforms/funcionarios/consultaFuncionario.php">FUNCIONÁRIO</a></li>
+                        <li><a href="conexaoBDphp/Felipeforms/fornecedores/consultaFornecedor.php">FORNECEDOR</a></li>
+                        <li><a href="conexaoBDphp/Felipeforms/produtos/consultaProduto.php">PRODUTO</a></li>
+                        <li><a href="conexaoBDphp/Felipeforms/usuarios/consultaUsuario.php">USUÁRIO</a></li>
                         <li><a href="index.php">SAIR</a></li>
                         
                     </ul>
@@ -55,23 +55,23 @@
         <div class="img">
 
         <div class="imgs_box" data-name="atividade">
-           <a href="conexaoBDphp/Felipeforms/cadastroCliente.php"><img src="conexaoBDphp/Felipeforms/assets/img/undraw_forms_re_pkrt.svg" ></a>
+           <a href="conexaoBDphp/Felipeforms/clientes/cadastroCliente.php"><img src="conexaoBDphp/Felipeforms/assets/img/undraw_forms_re_pkrt.svg" ></a>
             <h6>CADASTRO CLIENTE</h6>
         </div>
         <div class="imgs_box" data-name="atividade">
-          <a href="conexaoBDphp/Felipeforms/cadastroFuncionario.php"><img src="conexaoBDphp/Felipeforms/assets/img/undraw_product_iteration_kjok.svg" ></a> 
+          <a href="conexaoBDphp/Felipeforms/fornecedores/cadastroFornecedor.php"><img src="conexaoBDphp/Felipeforms/assets/img/undraw_product_iteration_kjok.svg" ></a> 
             <h6>CADASTRO FORNECEDOR</h6>
         </div>
         <div class="imgs_box" data-name="atividade">
-        <a href="conexaoBDphp/Felipeforms/cadastroFornecedor.php"><img src="conexaoBDphp/Felipeforms/assets/img/undraw_personal_file_re_5joy.svg" ></a> 
+        <a href="conexaoBDphp/Felipeforms/funcionarios/cadastroFuncionario.php"><img src="conexaoBDphp/Felipeforms/assets/img/undraw_personal_file_re_5joy.svg" ></a> 
             <h6>CADASTRO FUNCIONÁRIO</h6>
         </div>
         <div class="imgs_box" data-name="atividade">
-            <a href="conexaoBDphp/Felipeforms/cadastroProduto.php"><img src="conexaoBDphp/Felipeforms/assets/img/undraw_logistics_x-4-dc.svg" ></a>
+            <a href="conexaoBDphp/Felipeforms/produtos/cadastroProduto.php"><img src="conexaoBDphp/Felipeforms/assets/img/undraw_logistics_x-4-dc.svg" ></a>
                 <h6>CADASTRO PRODUTO</h6>
             </div>
              <div class="imgs_box" data-name="atividade">
-            <a href="conexaoBDphp/Felipeforms/cadastroUsuario.php"><img src="conexaoBDphp/Felipeforms/assets/img/undraw_user_flow_re_bvfx.svg" ></a>
+            <a href="conexaoBDphp/Felipeforms/usuarios/cadastroUsuario.php"><img src="conexaoBDphp/Felipeforms/assets/img/undraw_user_flow_re_bvfx.svg" ></a>
                 <h6>CADASTRO USUÁRIO</h6>
             </div>
             

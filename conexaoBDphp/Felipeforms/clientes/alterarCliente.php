@@ -4,9 +4,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/style.css">
     <script src="/Felipeforms/validaCPF.js"> </script>
-    <title>CADASTRO CLIENTE</title>
+    <title>ALTERAR CLIENTE</title>
     <style>
         @media screen and (max-width: 1337px) {
     .form-img {
@@ -55,7 +55,7 @@
 
 $cod = $_GET['id'];
 
-include_once('conexao.php');
+include_once('../conexao.php');
  
     $select = $connection->prepare("SELECT * FROM tb_cliente where cd_cliente=$cod");
     $select->execute();
@@ -65,7 +65,7 @@ include_once('conexao.php');
 ?>
     <div class="container">
         <div class="form-img">
-            <img src="assets/img/undraw_profile_details_re_ch9r.svg" >
+            <img src="../assets/img/undraw_profile_details_re_ch9r.svg" >
         </div>
         <div class="form">
             <form action="confirmarAlterarCliente.php" method="POST">
@@ -74,10 +74,11 @@ include_once('conexao.php');
                         <h1>ALTERAR CLIENTE</h1>
                     </div>
                     <div class="login-button">
-                        <button onclick="javascript:location.href ='../../menu.php';"><a href="#">VOLTAR</a></button>
+                        <button onclick="javascript:location.href ='../../../menu.php';"><a href="#">VOLTAR</a></button>
                     </div>
                 </div>
                 <div class="input-group">
+
                     <div class="input-box">
                         <label for="firstname">PRIMEIRO NOME</label>
                         <input type="text" id="firstname" name="firstname" placeholder="Digite seu primeiro nome" value="<?php echo $row['nm_primeiro'];?>"  required>
@@ -151,6 +152,6 @@ include_once('conexao.php');
             </form>
         </div>
     </div>
-    <script src="index.js"></script>
+    <script src="../index.js"></script>
 </body>
 </html>

@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/style.css">
     <title>CADASTRO FORNECEDOR</title>
     <style>
                 @media screen and (max-width: 1628px) {
@@ -52,7 +52,7 @@
 <body>
     <div class="container">
         <div class="form-img">
-            <img src="assets/img/undraw_product_iteration_kjok.svg" >
+            <img src="../assets/img/undraw_product_iteration_kjok.svg" >
         </div>
         <div class="form">
             <form action="#" method="POST">
@@ -61,7 +61,7 @@
                         <h1>CADASTRE-SE FORNECEDOR</h1>
                     </div>
                     <div class="login-button">
-                        <button onclick="javascript:location.href ='../../menu.php';"><a href="#">VOLTAR</a></button>
+                        <button onclick="javascript:location.href ='../../../menu.php';"><a href="#">VOLTAR</a></button>
                     </div>
                 </div>
                 <div class="input-group">
@@ -391,7 +391,7 @@
             </form>
         </div>
     </div>
-    <script src="index.js"></script>
+    <script src="../index.js"></script>
 </body>
 </html>
 
@@ -412,7 +412,7 @@
         $genero = $_POST['gender'];
 		
 		
-        include_once('conexao.php');
+        include_once('../conexao.php');
 
         try {
             $stmt = $connection->prepare("INSERT INTO tb_fornecedor (nm_primeiro, nm_sobrenome, nr_cnpj, nm_empresa, tp_produto, nr_cep, nr_endereco, nm_pais, nr_celular, nm_email, id_genero)

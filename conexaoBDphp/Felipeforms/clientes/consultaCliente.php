@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/style.css">
     <title>CADASTRO CLIENTE</title>
     <style>
         @media screen and (max-width: 1337px) {
@@ -52,7 +52,7 @@
 <body>
     <div class="container">
         <div class="form-img">
-            <img src="assets/img/undraw_forms_re_pkrt.svg" >
+            <img src="../assets/img/undraw_forms_re_pkrt.svg" >
         </div>
         <div class="form">
 
@@ -61,12 +61,12 @@
                         <h1>CONSULTA CLIENTES</h1>
                     </div>
                     <div class="login-button">
-                        <button onclick="javascript:location.href ='../../menu.php';"><a href="#">VOLTAR</a></button>
+                        <button onclick="javascript:location.href ='../../../menu.php';"><a href="#">VOLTAR</a></button>
                     </div>
                 </div>
                 <div class="input-group">
                 <?php
-                    include_once('conexao.php');
+                    include_once('../conexao.php');
                     try{
                         $select = $connection->prepare('SELECT * FROM tb_cliente');
                         $select->execute();
@@ -93,7 +93,7 @@
                         <button onclick="window.location.href='excluirCliente.php?id=<?php echo $row['cd_cliente'];?>'">
                             Excluir
                         </button>
-                        <button onclick="window.location.href='../../menu.php'">Voltar</button>
+                        <button onclick="window.location.href='../../../menu.php'">Voltar</button>
 	                    <hr>
                         <?php
                         }

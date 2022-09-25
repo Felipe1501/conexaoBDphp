@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/style.css">
     <title>CADASTRO USUÁRIO</title>
     <style>
                 @media screen and (max-width: 1337px) {
@@ -52,7 +52,7 @@
 <body>
     <div class="container">
         <div class="form-img">
-            <img src="assets/img/undraw_user_flow_re_bvfx.svg" >
+            <img src="../assets/img/undraw_user_flow_re_bvfx.svg" >
         </div>
         <div class="form" >
             <form action="#" method="POST">
@@ -61,7 +61,7 @@
                         <h1>CADASTRE-SE USUÁRIO</h1>
                     </div>
                     <div class="login-button">
-                        <button onclick="javascript:location.href ='../../menu.php';"><a href="#">VOLTAR</a></button>
+                        <button onclick="javascript:location.href ='../../../menu.php';"><a href="#">VOLTAR</a></button>
                     </div>
                 </div>
                 <div class="input-group">
@@ -147,7 +147,7 @@
             </form>
         </div>
     </div>
-    <script src="index.js"></script>
+    <script src="../index.js"></script>
 </body>
 </html>
 
@@ -165,7 +165,7 @@
         $senha = $_POST['password'];
         $genero = $_POST['gender'];
 		
-		include_once('conexao.php');
+		include_once('../conexao.php');
 
         try{
             $stmt = $connection->prepare("INSERT INTO tb_usuario (nm_primeiro, nm_sobrenome, id_perfil, nm_email, nr_endereco, nr_celular, nm_usuario, nm_senha, id_genero)

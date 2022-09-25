@@ -3,7 +3,6 @@
 include_once('conexao.php');
 
 
-
 $primeironm = $_POST['firstname'];
 $sobrenome = $_POST['lastname'];
 $cpf = $_POST['cpf'];

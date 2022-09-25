@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="assets/css/style.css">
-    <title>CONSULTA PRODUTO</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <title>CONSULTA USUÁRIO</title>
     <style>
                 @media screen and (max-width: 1337px) {
     .form-img {
@@ -52,44 +52,43 @@
 <body>
     <div class="container">
         <div class="form-img">
-            <img src="assets/img/undraw_logistics_x-4-dc.svg" >
+            <img src="../assets/img/undraw_user_flow_re_bvfx.svg" >
         </div>
         <div class="form">
-            <form action="#" method="POST">
-                <div class="form-header">
+           <div class="form-header">
                     <div class="title">
-                        <h1>CONSULTAR PRODUTOS</h1>
+                        <h1>CONSULTA USUÁRIOS</h1>
                     </div>
                     <div class="login-button">
-                        <button onclick="javascript:location.href ='../../menu.php';"><a href="#">VOLTAR</a></button>
+                        <button onclick="javascript:location.href ='../../../menu.php';"><a href="#">VOLTAR</a></button>
                     </div>
                 </div>
                 <div class="input-group">
                 <?php
-                    include_once('conexao.php');
+                    include_once('../conexao.php');
                     try{
-                        $select = $connection->prepare('SELECT * FROM tb_produto');
+                        $select = $connection->prepare('SELECT * FROM tb_usuario');
                         $select->execute();
 
                         while($row = $select->fetch())
                         {
                             echo "<p>";
-                            echo "<br><b>CÓDIGO: </b>".$row['cd_produto'];
-                            echo "<br><b>NOME: </b>".$row['nm_produto'];
-                            echo "<br><b>CATEGORIA: </b>".$row['nm_categoria'];
-                            echo "<br><b>VALOR: </b>".$row['vl_produto'];
-                            echo "<br><b>QUANTIDADE: </b>".$row['qt_produto'];
-                            echo "<br><b>EMPRESA: </b>".$row['nm_empresa'];
-                            echo "<br><b>CNPJ: </b>".$row['nr_cnpj'];
+                            echo "<br><b>CÓDIGO: </b>".$row['cd_usuario'];
+                            echo "<br><b>NOME: </b>".$row['nm_primeiro'];
+                            echo "<br><b>SOBRENOME: </b>".$row['nm_sobrenome'];
+                            echo "<br><b>PERFIL: </b>".$row['id_perfil'];
                             echo "<br><b>EMAIL: </b>".$row['nm_email'];
-                            echo "<br><b>PRODUTO: </b>".$row['id_produto'];
+                            echo "<br><b>ENDEREÇO: </b>".$row['nr_endereco'];
+                            echo "<br><b>CELULAR: </b>".$row['nr_celular'];
+                            echo "<br><b>NOME USUÁRIO: </b>".$row['nm_usuario'];
+                            echo "<br><b>GÊNERO: </b>".$row['id_genero'];
                             echo "</p><br>";
                             ?>
-                            <button onclick="window.location.href='alterarProduto.php?id=<?php echo $row['cd_produto'];?>'">
+                            <button onclick="window.location.href='alterarProduto.php?id=<?php echo $row['cd_usuario'];?>'">
                             Alterar
                         </button>
 
-                        <button onclick="window.location.href='excluirProduto.php?id=<?php echo $row['cd_produto'];?>'">
+                        <button onclick="window.location.href='excluirProduto.php?id=<?php echo $row['cd_usuario'];?>'">
                             Excluir
                         </button>
 	                    <hr>
@@ -105,6 +104,6 @@
                 </div>
         </div>
     </div>
-    <script src="index.js"></script>
+    <script src="../index.js"></script>
 </body>
 </html>

@@ -4,10 +4,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="assets/css/style.css">
-    <title>CONSULTA FORNECEDOR</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <title>CONSULTA FUNCIONÁRIO</title>
     <style>
-                @media screen and (max-width: 1628px) {
+        @media screen and (max-width: 1628px) {
     .form-img {
         display: none;
     }
@@ -52,34 +52,34 @@
 <body>
     <div class="container">
         <div class="form-img">
-            <img src="assets/img/undraw_product_iteration_kjok.svg" >
+            <img src="../assets/img/undraw_personal_file_re_5joy.svg" >
         </div>
         <div class="form">
             <form action="#" method="POST">
                 <div class="form-header">
                     <div class="title">
-                        <h1>CONSULTA FORNECEDOR</h1>
+                        <h1>CONSULTA FUNCIONÁRIO</h1>
                     </div>
                     <div class="login-button">
-                        <button onclick="javascript:location.href ='../../menu.php';"><a href="#">VOLTAR</a></button>
+                        <button onclick="javascript:location.href ='../../../menu.php';"><a href="#">VOLTAR</a></button>
                     </div>
                 </div>
-                    <div class="input-group">
-                    <?php
-                    include_once('conexao.php');
+                <div class="input-group">
+                <?php
+                    include_once('../conexao.php');
                     try{
-                        $select = $connection->prepare('SELECT * FROM tb_fornecedor');
+                        $select = $connection->prepare('SELECT * FROM tb_funcionario');
                         $select->execute();
 
                         while($row = $select->fetch())
                         {
                             echo "<p>";
-                            echo "<br><b>CÓDIGO: </b>".$row['cd_fornecedor'];
+                            echo "<br><b>CÓDIGO: </b>".$row['cd_funcionario'];
                             echo "<br><b>NOME: </b>".$row['nm_primeiro'];
                             echo "<br><b>SOBRENOME: </b>".$row['nm_sobrenome'];
-                            echo "<br><b>CNPJ: </b>".$row['nr_cnpj'];
-                            echo "<br><b>EMPRESA: </b>".$row['nm_empresa'];
-                            echo "<br><b>PRODUTO: </b>".$row['tp_produto'];
+                            echo "<br><b>DATA NASCIMENTO: </b>".$row['dt_nasc'];
+                            echo "<br><b>CPF: </b>".$row['nr_cpf'];
+                            echo "<br><b>RG: </b>".$row['nr_rg'];
                             echo "<br><b>CEP: </b>".$row['nr_cep'];
                             echo "<br><b>ENDEREÇO: </b>".$row['nr_endereco'];
                             echo "<br><b>PAIS: </b>".$row['nm_pais'];
@@ -88,13 +88,16 @@
                             echo "<br><b>GÊNERO: </b>".$row['id_genero'];
                             echo "</p><br>";
                             ?>
-                            <button onclick="window.location.href='alterarFornecedor.php?id=<?php echo $row['cd_fornecedor'];?>'">
-                            Alterar
-                        </button>
+                            <div class="login-button">
 
-                        <button onclick="window.location.href='excluirFornecedor.php?id=<?php echo $row['cd_fornecedor'];?>'">
-                            Excluir
-                        </button>
+                                <button onclick="window.location.href='alterarFuncionario.php?id=<?php echo $row['cd_funcionario'];?>'">
+                                Alterar
+                            </button>
+    
+                            <button onclick="window.location.href='excluirFuncionario.php?id=<?php echo $row['cd_funcionario'];?>'">
+                                Excluir
+                            </button>
+                            </div>
 	                    <hr>
                         <?php
                         }
@@ -104,10 +107,10 @@
                     }
                 
                 ?>
-            
                 </div>
+   
         </div>
     </div>
-    <script src="index.js"></script>
+    <script src="../index.js"></script>
 </body>
 </html>
