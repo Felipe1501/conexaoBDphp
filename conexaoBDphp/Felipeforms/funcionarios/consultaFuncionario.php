@@ -55,7 +55,7 @@
             <img src="../assets/img/undraw_personal_file_re_5joy.svg" >
         </div>
         <div class="form">
-            <form action="#" method="POST">
+   
                 <div class="form-header">
                     <div class="title">
                         <h1>CONSULTA FUNCIONÁRIO</h1>

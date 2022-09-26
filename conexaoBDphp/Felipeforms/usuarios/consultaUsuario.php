@@ -84,11 +84,11 @@
                             echo "<br><b>GÊNERO: </b>".$row['id_genero'];
                             echo "</p><br>";
                             ?>
-                            <button onclick="window.location.href='alterarProduto.php?id=<?php echo $row['cd_usuario'];?>'">
+                            <button onclick="window.location.href='alterarUsuario.php?id=<?php echo $row['cd_usuario'];?>'">
                             Alterar
                         </button>
 
-                        <button onclick="window.location.href='excluirProduto.php?id=<?php echo $row['cd_usuario'];?>'">
+                        <button onclick="window.location.href='excluirUsuario.php?id=<?php echo $row['cd_usuario'];?>'">
                             Excluir
                         </button>
 	                    <hr>

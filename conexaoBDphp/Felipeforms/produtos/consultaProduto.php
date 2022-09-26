@@ -55,7 +55,7 @@
             <img src="../assets/img/undraw_logistics_x-4-dc.svg" >
         </div>
         <div class="form">
-            <form action="#" method="POST">
+  
                 <div class="form-header">
                     <div class="title">
                         <h1>CONSULTAR PRODUTOS</h1>

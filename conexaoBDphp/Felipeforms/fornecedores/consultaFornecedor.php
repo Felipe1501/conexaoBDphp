@@ -55,7 +55,7 @@
             <img src="../assets/img/undraw_product_iteration_kjok.svg" >
         </div>
         <div class="form">
-            <form action="#" method="POST">
+
                 <div class="form-header">
                     <div class="title">
                         <h1>CONSULTA FORNECEDOR</h1>
