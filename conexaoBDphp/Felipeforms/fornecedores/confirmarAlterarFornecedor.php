@@ -5,10 +5,12 @@ include_once('../conexao.php');
 
 $primeironm = $_POST['firstname'];
 $sobrenome = $_POST['lastname'];
-$cpf = $_POST['cpf'];
-$rg = $_POST['rg'];
+$cnpj = $_POST['cnpj'];
+$empresa = $_POST['empresa'];
+$produto = $_POST['produto'];
 $cep = $_POST['cep'];
 $endereco = $_POST['endereco'];
+$pais = $_POST['country'];
 $tel = $_POST['tel'];
 $email = $_POST['email'];
 $genero = $_POST['gender'];
@@ -16,30 +18,34 @@ $genero = $_POST['gender'];
 	try 
 	{
 
-		$stmt = $connection->prepare("UPDATE tb_cliente SET firstname = :primeironm,
+		$stmt = $connection->prepare("UPDATE tb_fornecedor SET firstname = :primeironm,
 													  lastname = :sobrenome,
-													  cpf = :cpf,
-													  rg = :rg,
+													  cnpj = :cnpj,
+													  empresa = :empresa,
+													  produto = :produto,
 													  cep = :cep,
                                                       endereco = :endereco,
+                                                      pais = :pais,
                                                       tel = :tel,
                                                       email = :email,
-													  gender = :genero WHERE cd_cliente = :id");
+													  gender = :genero WHERE cd_fornecedor = :id");
 
 		$stmt->execute(array(
 							 ':primeironm' => $primeironm,
 							 ':sobrenome' => $sobrenome,
-							 ':cpf' => $cpf,
-							 ':rg' => $rg,
+							 ':cnpj' => $cnpj,
+							 ':empresa' => $empresa,
+							 ':produto' => $produto,
 							 ':cep' => $cep,
 							 ':endereco' => $endereco,
+							 ':pais' => $pais,
 							 ':tel' => $tel,
                              ':email' => $email,
-                             ':gender' => $genero));
+                             ':id_genero' => $genero));
 		
-		header( "refresh:0;url=consultaCliente.php" );
+		header( "refresh:0;url=consultaFornecedor.php" );
 
-		echo "<script>alert('CLIENTE ALTERADO COM SUCESSO');</script>";
+		echo "<script>alert('FORNECEDOR ALTERADO COM SUCESSO');</script>";
 
 
 	} 

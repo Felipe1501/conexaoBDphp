@@ -61,7 +61,7 @@
                         <h1>EXCLUIR USUÁRIO</h1>
                     </div>
                     <div class="login-button">
-                        <button onclick="javascript:location.href ='../../../menu.php';"><a href="#">VOLTAR</a></button>
+                        <button onclick="javascript:location.href ='consultaUsuario.php';"><a href="#">VOLTAR</a></button>
                     </div>
                 </div>
                 <div class="input-group">
@@ -90,12 +90,11 @@
                             echo "<br><b>GÊNERO: </b>".$row['id_genero'];
                             echo "</p>";
                 ?>
-                    
+                    <div class="login-button">
                     <button onclick="window.location.href='confirmarExcluirUsuario.php?id=<?php echo $row['cd_usuario'];?>'">
                         Excluir
                     </button>
-                    
-                    <button onclick="window.location.href='consultaUsuario.php'">Voltar</button>
+                    </div>
 
                 <?php
                         }

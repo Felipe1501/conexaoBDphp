@@ -74,7 +74,7 @@ include_once('../conexao.php');
                         <h1>ALTERAR CLIENTE</h1>
                     </div>
                     <div class="login-button">
-                        <button onclick="javascript:location.href ='../../../menu.php';"><a href="#">VOLTAR</a></button>
+                        <button onclick="javascript:location.href ='consultaCliente.php';"><a href="#">VOLTAR</a></button>
                     </div>
                 </div>
                 <div class="input-group">

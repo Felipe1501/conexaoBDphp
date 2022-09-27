@@ -84,7 +84,7 @@
                         }
                         
                     ?>
-                    <button onclick="window.location.href='consultaUsuario.php'">Voltar</button>
+                    
                 </div>
 
 

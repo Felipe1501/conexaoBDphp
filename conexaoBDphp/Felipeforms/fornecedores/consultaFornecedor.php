@@ -88,6 +88,7 @@
                             echo "<br><b>GÊNERO: </b>".$row['id_genero'];
                             echo "</p><br>";
                             ?>
+                            <div class="login-button">
                             <button onclick="window.location.href='alterarFornecedor.php?id=<?php echo $row['cd_fornecedor'];?>'">
                             Alterar
                         </button>
@@ -96,6 +97,7 @@
                             Excluir
                         </button>
 	                    <hr>
+                        </div>
                         <?php
                         }
                     }

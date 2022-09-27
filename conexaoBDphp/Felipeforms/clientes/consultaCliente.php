@@ -86,6 +86,7 @@
                             echo "<br><b>GÊNERO: </b>".$row['id_genero'];
                             echo "</p><br>";
                             ?>
+                            <div class="login-button">
                             <button onclick="window.location.href='alterarCliente.php?id=<?php echo $row['cd_cliente'];?>'">
                             Alterar
                         </button>
@@ -93,7 +94,6 @@
                         <button onclick="window.location.href='excluirCliente.php?id=<?php echo $row['cd_cliente'];?>'">
                             Excluir
                         </button>
-                        <button onclick="window.location.href='../../../menu.php'">Voltar</button>
 	                    <hr>
                         <?php
                         }
@@ -105,8 +105,7 @@
                 ?>
                 </div>
 
-                
-                
+            </div>   
 
         </div>
     </div>

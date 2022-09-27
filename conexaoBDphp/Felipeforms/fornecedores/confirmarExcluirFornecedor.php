@@ -84,7 +84,7 @@
                         }
                         
                     ?>
-                    <button onclick="window.location.href='consultaFornecedor.php'">Voltar</button>
+                    
                 </div>
 
 
