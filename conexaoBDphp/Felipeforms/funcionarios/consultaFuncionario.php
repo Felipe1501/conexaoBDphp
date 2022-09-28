@@ -50,6 +50,10 @@
     </style>
 </head>
 <body>
+<?php
+
+include_once('../conexao.php');
+    ?>
     <div class="container">
         <div class="form-img">
             <img src="../assets/img/undraw_personal_file_re_5joy.svg" >
@@ -66,7 +70,7 @@
                 </div>
                 <div class="input-group">
                 <?php
-                    include_once('../conexao.php');
+                    
                     try{
                         $select = $connection->prepare('SELECT * FROM tb_funcionario');
                         $select->execute();
@@ -98,7 +102,7 @@
                                 Excluir
                             </button>
                             </div>
-	                    <hr>
+	                    
                         <?php
                         }
                     }
