@@ -77,6 +77,10 @@ include_once('../conexao.php');
                     </div>
                 </div>
                 <div class="input-group">
+                <div class="input-box">
+                        <label for="cod">CÓDIGO</label>
+                        <input type="text" id="cod" name="cod" placeholder="Digite seu primeiro nome" value="<?php echo $row['cd_funcionario'];?>" readonly="true">
+                    </div>
                     <div class="input-box">
                         <label for="firstname">PRIMEIRO NOME</label>
                         <input type="text" id="firstname" name="firstname" placeholder="Digite seu primeiro nome" value="<?php echo $row['nm_primeiro'];?>" required>
@@ -99,7 +103,7 @@ include_once('../conexao.php');
 
                     <div class="input-box">
                         <label for="rg">RG</label>
-                        <input type="text" id="rg" name="rg" placeholder="Digite seu rg" value="<?php echo $row['nr_cpf'];?>" required>
+                        <input type="text" id="rg" name="rg" placeholder="Digite seu rg" value="<?php echo $row['nr_rg'];?>" required>
                     </div>
                     
                     <div class="input-box">

@@ -2,7 +2,7 @@
 
 include_once('../conexao.php');
 
-
+$cod = $_POST['cod'];
 $primeironm = $_POST['firstname'];
 $sobrenome = $_POST['lastname'];
 $cpf = $_POST['cpf'];
@@ -16,17 +16,18 @@ $genero = $_POST['gender'];
 	try 
 	{
 
-		$stmt = $connection->prepare("UPDATE tb_cliente SET firstname = :primeironm,
-													  lastname = :sobrenome,
-													  cpf = :cpf,
-													  rg = :rg,
-													  cep = :cep,
-                                                      endereco = :endereco,
-                                                      tel = :tel,
-                                                      email = :email,
-													  gender = :genero WHERE cd_cliente = :id");
+		$stmt = $connection->prepare("UPDATE tb_cliente SET nm_primeiro = :primeironm,
+													  nm_sobrenome = :sobrenome,
+													  nr_cpf = :cpf,
+													  nr_rg = :rg,
+													  nr_cep = :cep,
+                                                      nr_endereco = :endereco,
+                                                      nr_celular = :tel,
+                                                      nm_email = :email,
+													  id_genero = :genero WHERE cd_cliente = :id");
 
 		$stmt->execute(array(
+							 ':id' => $cod,
 							 ':primeironm' => $primeironm,
 							 ':sobrenome' => $sobrenome,
 							 ':cpf' => $cpf,
@@ -35,7 +36,7 @@ $genero = $_POST['gender'];
 							 ':endereco' => $endereco,
 							 ':tel' => $tel,
                              ':email' => $email,
-                             ':gender' => $genero));
+                             ':genero' => $genero));
 		
 		header( "refresh:0;url=consultaCliente.php" );
 

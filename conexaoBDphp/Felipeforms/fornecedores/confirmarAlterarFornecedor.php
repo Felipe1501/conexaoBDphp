@@ -2,7 +2,7 @@
 
 include_once('../conexao.php');
 
-
+$cod = $_POST['cod'];
 $primeironm = $_POST['firstname'];
 $sobrenome = $_POST['lastname'];
 $cnpj = $_POST['cnpj'];
@@ -18,19 +18,20 @@ $genero = $_POST['gender'];
 	try 
 	{
 
-		$stmt = $connection->prepare("UPDATE tb_fornecedor SET firstname = :primeironm,
-													  lastname = :sobrenome,
-													  cnpj = :cnpj,
-													  empresa = :empresa,
-													  produto = :produto,
-													  cep = :cep,
-                                                      endereco = :endereco,
-                                                      pais = :pais,
-                                                      tel = :tel,
-                                                      email = :email,
-													  gender = :genero WHERE cd_fornecedor = :id");
+		$stmt = $connection->prepare("UPDATE tb_fornecedor SET nm_primeiro = :primeironm,
+													  nm_sobrenome = :sobrenome,
+													  nr_cnpj = :cnpj,
+													  nm_empresa = :empresa,
+													  tp_produto = :produto,
+													  nr_cep = :cep,
+                                                      nr_endereco = :endereco,
+                                                      nm_pais = :pais,
+                                                      nr_celular = :tel,
+                                                      nm_email = :email,
+													  id_genero = :genero WHERE cd_fornecedor = :id");
 
 		$stmt->execute(array(
+							 ':id' => $cod,
 							 ':primeironm' => $primeironm,
 							 ':sobrenome' => $sobrenome,
 							 ':cnpj' => $cnpj,
@@ -41,7 +42,7 @@ $genero = $_POST['gender'];
 							 ':pais' => $pais,
 							 ':tel' => $tel,
                              ':email' => $email,
-                             ':id_genero' => $genero));
+                             ':genero' => $genero));
 		
 		header( "refresh:0;url=consultaFornecedor.php" );
 
