@@ -4,10 +4,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../assets/css/style.css">
-    <title>ALTERAR FUNCIONÁRIO</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <title>CADASTRO FORNECEDOR</title>
     <style>
-        @media screen and (max-width: 1628px) {
+                @media screen and (max-width: 1628px) {
     .form-img {
         display: none;
     }
@@ -50,75 +50,59 @@
     </style>
 </head>
 <body>
-<?php
-
-$cod = $_GET['id'];
-
-include_once('../conexao.php');
- 
-    $select = $connection->prepare("SELECT * FROM tb_funcionario where cd_funcionario=$cod");
-    $select->execute();
-
-    $row = $select->fetch();
-    
-?>
     <div class="container">
         <div class="form-img">
-            <img src="../assets/img/undraw_personal_file_re_5joy.svg" >
+            <img src="/formsFelipe/assets/img/undraw_product_iteration_kjok.svg" >
         </div>
         <div class="form">
-            <form action="confirmarAlterarFuncionario.php" method="POST">
+            <form action="#" method="POST">
                 <div class="form-header">
                     <div class="title">
-                        <h1>ALTERAR FUNCIONÁRIO</h1>
+                        <h1>CADASTRE-SE FORNECEDOR</h1>
                     </div>
                     <div class="login-button">
-                        <button onclick="javascript:location.href ='consultaFuncionario.php';"><a href="#">VOLTAR</a></button>
+                        <button onclick="javascript:location.href ='menu.php';"><a href="#">VOLTAR</a></button>
                     </div>
                 </div>
                 <div class="input-group">
                     <div class="input-box">
-                        <label for="cod">CÓDIGO</label>
-                        <input type="text" id="cod" name="cod" placeholder="Digite seu primeiro nome" value="<?php echo $row['cd_funcionario'];?>" readonly="true">
-                    </div>
-                    <div class="input-box">
                         <label for="firstname">PRIMEIRO NOME</label>
-                        <input type="text" id="firstname" name="firstname" placeholder="Digite seu primeiro nome" value="<?php echo $row['nm_primeiro'];?>" required>
+                        <input type="text" id="firstname" name="firstname" placeholder="Digite seu primeiro nome" required>
                     </div>
 
                     <div class="input-box">
                         <label for="lastname">SOBRENOME</label>
-                        <input type="text" id="lastname" name="lastname" placeholder="Digite seu sobrenome" value="<?php echo $row['nm_sobrenome'];?>" required>
+                        <input type="text" id="lastname" name="lastname" placeholder="Digite seu sobrenome" required>
                     </div>
 
                     <div class="input-box">
-                        <label for="nasc">DATA DE NASCIMENTO</label>
-                        <input type="date" id="dataa" name="dataa" value="<?php echo $row['dt_nasc'];?>" required/>
+                        <label for="cnpj">CNPJ</label>
+                        <input type="text" id="cnpj" name="cnpj" placeholder="Digite seu cnpj" oninput="mascara(this, 'cnpj')" required/>
                     </div>
 
                     <div class="input-box">
-                        <label for="cpf">CPF</label>
-                        <input type="text" id="cpf" name="cpf" placeholder="Digite seu cpf" oninput="mascara(this, 'cpf')" value="<?php echo $row['nr_cpf'];?>" required/>
+                        <label for="empresa">NOME EMPRESA</label>
+                        <input type="text" id="empresa" name="empresa" placeholder="Digite o nome da empresa" required>
                     </div>
 
                     <div class="input-box">
-                        <label for="rg">RG</label>
-                        <input type="text" id="rg" name="rg" placeholder="Digite seu rg" value="<?php echo $row['nr_cpf'];?>" required>
-                    </div>
-                    
-                    <div class="input-box">
-                        <label for="endereco">ENDEREÇO</label>
-                        <input type="text" id="endereco" name="endereco" placeholder="Digite seu endereco" value="<?php echo $row['nr_cep'];?>" required>
+                        <label for="produto">TIPO DE PRODUTO</label>
+                        <input type="text" id="produto" name="produto" placeholder="Digite o tipo de produto" required>
                     </div>
 
                     <div class="input-box">
                         <label for="cep">CEP</label>
-                        <input type="text" id="cep" name="cep" placeholder="Digite seu cep" oninput="mascara(this, 'cep')" value="<?php echo $row['nr_endereco'];?>" required>
+                        <input type="text" id="cep" name="cep" placeholder="Digite seu cep" oninput="mascara(this, 'cep')" required>
                     </div>
-                    
+
+                    <div class="input-box">
+                        <label for="endereco">ENDEREÇO</label>
+                        <input type="text" id="endereco" name="endereco" placeholder="Digite seu endereco" required>
+                    </div>
+
                     <div class="input-box">
                         <label for="pais">SELECIONE SEU PAÍS</label>
-                        <select  id="exampleInputCountry" id="pais"  name="country"  placeholder="Selecione seu país" required>
+                        <select  id="exampleInputCountry" id="pais" name="country"  placeholder="Selecione seu país" required>
                             <option value="" selected="selected">Selecione um país</option>
                             <option value="United States">United States</option>
                             <option value="United Kingdom">United Kingdom</option>
@@ -363,15 +347,15 @@ include_once('../conexao.php');
                             <option value="Zimbabwe">Zimbabwe</option>
                           </select>
                     </div>
-                    
+
                     <div class="input-box">
                         <label for="tel">CELULAR</label>
-                        <input type="text" id="tel" name="tel" placeholder="(xx) xxxx-xxxx" oninput="mascara(this, 'tel')" value="<?php echo $row['nr_celular'];?>" required>
+                        <input type="text" id="tel" name="tel" placeholder="(xx) xxxx-xxxx" oninput="mascara(this, 'tel')" required>
                     </div>
-                    
+
                     <div class="input-box">
                         <label for="email">EMAIL</label>
-                        <input type="text" id="email" name="email" placeholder="Digite seu email" value="<?php echo $row['nm_email'];?>" required>
+                        <input type="text" id="email" name="email" placeholder="Digite seu email" required>
                     </div>
  
                 </div>
@@ -380,33 +364,70 @@ include_once('../conexao.php');
 
                 <div class="gender-inputs">
                     <div class="gender-title">
-                        <h6>GÊNERO</h6>
+                        <h6>EMPRESA</h6>
                     </div>
                     <div class="gender-group">
                         <div class="gender-input">
-                            <input type="radio" id="feminino" name="gender" value="FEMININO">
-                            <label for="feminino">FEMININO</label>
+                            <input type="radio" id="transnacional" name="gender" value="TRANSNACIONAL">
+                            <label for="transnacional">TRANSNACIONAL</label>
                         </div>
                         <div class="gender-input">
-                            <input type="radio" id="masculino" name="gender" value="MASCULINO">
-                            <label for="masculino">MASCULINO</label>
+                            <input type="radio" id="multi" name="gender" value="MULTINACIONAL">
+                            <label for="multi">MULTINACIONAL</label>
                         </div>
                         <div class="gender-input">
-                            <input type="radio" id="outros" name="gender" value="OUTROS">
-                            <label for="outros">OUTROS</label>
+                            <input type="radio" id="nacional" name="gender" value="NACIONAL">
+                            <label for="nacional">NACIONAL</label>
                         </div>
                         <div class="gender-input">
-                            <input type="radio" id="nada" name="gender" value="PREFIRO NÃO DIZER">
+                            <input type="radio" id="nada" name="gender" value="OUTROS">
                             <label for="nada">PREFIRO NÃO DIZER</label>
                         </div>
                     </div>
                 </div>
                 <div class="continue-button">
-                    <button><a href="#">ALTERAR</a></button>
+                    <button><a href="#">CADASTRAR</a></button>
                 </div>
             </form>
         </div>
     </div>
-    <script src="../index.js"></script>
+    <script src="index.js"></script>
 </body>
 </html>
+
+<?php
+
+	if(!empty($_POST))
+	{
+        $primeironm = $_POST['firstname'];
+        $sobrenome = $_POST['lastname'];
+		$cnpj = $_POST['cnpj'];
+        $empresa = $_POST['empresa'];
+        $produto = $_POST['produto'];
+        $cep = $_POST['cep'];
+		$endereco = $_POST['endereco'];
+        $pais = $_POST['country'];
+		$tel = $_POST['tel'];
+		$email = $_POST['email'];
+        $genero = $_POST['gender'];
+		
+		$arquivo = fopen("cadastro/fornecedor.txt", "a+")or die("Não foi possivel abrir o arquivo!");
+		
+		$conteudo = "$primeironm $sobrenome, $cnpj, $empresa, $produto, $cep, $endereco, $pais, $tel, $email, $genero,
+";
+
+		if(fwrite($arquivo, $conteudo))
+		{
+			echo "<script>alert('Cadastrado com sucesso');</script>";
+			fclose($arquivo);
+		}
+		else
+		{
+			echo "<script>alert('Erro ao cadastrar as informações');</script>";
+		}
+		
+		
+	}
+
+
+?>
