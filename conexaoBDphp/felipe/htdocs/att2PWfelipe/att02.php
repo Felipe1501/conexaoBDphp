@@ -4,7 +4,9 @@
         <meta charset="UTF-8">
         <link rel="shortcut icon" href="https://i.pinimg.com/originals/0b/92/73/0b9273d73d5d0bf77f07d29d2408b7c5.png" type="image/x-icon">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+
         <link href="/conexaoBDphp/felipe/htdocs/att2PWfelipe/style.css" rel="stylesheet">
+
         <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -30,7 +32,9 @@
             </ul>
             <ul class="nav_list">
                 <li>
+
                     <a href="/conexaoBDphp/felipe/htdocs/att2PWfelipe/menuatt2.html">
+
                         <i class='bx bx-grid-alt' ></i>
                         <span class="links_name">PRINCIPAL</span>
                     </a>
@@ -39,7 +43,9 @@
             </ul>
             <ul class="nav_list">
                 <li>
+
                     <a href="/conexaoBDphp/felipe/htdocs/testandoCss/landing.html">
+
                         <i class='bx bx-user' ></i>
                         <span class="links_name">SOBRE EU</span>
                     </a>
@@ -48,7 +54,9 @@
             </ul>
             <ul class="nav_list">
                 <li>
+
                     <a href="/conexaoBDphp/felipe/htdocs/att2PWfelipe/att01.php">
+
                         <i class='bx bxs-food-menu'></i>
                         <span class="links_name">EXERCÍCIO 1</span>
                     </a>
@@ -57,7 +65,9 @@
             </ul>
             <ul class="nav_list">
                 <li>
+
                     <a href="/conexaoBDphp/felipe/htdocs/att2PWfelipe/att02.php">
+
                         <i class='bx bx-football'></i>
                         <span class="links_name">EXERCÍCIO 2</span>
                     </a>
@@ -66,7 +76,9 @@
             </ul>
             <ul class="nav_list">
                 <li>
+
                     <a href="/conexaoBDphp/felipe/htdocs/att2PWfelipe/att03.php">
+
                     <i class='bx bx-cart-alt'></i>
                         <span class="links_name">EXERCÍCIO 3</span>
                     </a>
@@ -75,7 +87,9 @@
             </ul>
             <ul class="nav_list">
                 <li>
+
                 <a href="/conexaoBDphp/felipe/htdocs/att1PWfelipe/menu.php">
+
                         <i class='bx bxs-briefcase'></i>
                         <span class="links_name">ATIVIDADE 1</span>
                     </a>
@@ -102,7 +116,9 @@
         <img src="https://i.pinimg.com/originals/0b/92/73/0b9273d73d5d0bf77f07d29d2408b7c5.png" class="ibis" />
         <div class="content">
             <h3>JOGOU AONDE JUVENA? RESPONDA AS PERGUNTAS A BAIXO PARA ANALISARMOS SUA CATEGORIA</h3>
+
             <form action='/conexaoBDphp/felipe/htdocs/att2PWfelipe/resposta02.php' method='post'>
+
                 <label for='nome'>JUVENA, ME DIGA SEU NOME COMPLETO:</label><br>
                 <input type='text' id='name' class='name' name='name' placeholder='JUVENA'><br>
                 <label for='idade'>IDADE JOGADOR:</label><br>
