@@ -1,0 +1,169 @@
+<html>
+    <head>
+        <title>MÉDIAS</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+        <script src="js/bootstrap.bundle.min.js" ></script>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia">
+    <style>
+        #ESfigma{
+            width: 100%;
+            height: 100%;
+        }
+
+        .cabecalho{
+            width: 100%;
+            height: 20%;
+        }
+
+
+        .titulo{
+            width: 50%;
+            height: 50%;
+            margin-left: 35%;
+
+        }
+
+         h2{
+
+            font-family: 'Sofia';
+            color: #26609E;
+        }
+
+        h5{
+            font-family: 'Roboto';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 16px;
+            text-align: center;
+        }
+
+        h3{
+            font-family: 'Sofia';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 24px;
+            line-height: 38px;
+            text-align: center;
+            color: #26609E;
+        }
+
+        .meio{
+            position: absolute;
+            width: 311px;
+            height: 38px;
+            left: 519.19px;
+            top: 295px;
+
+        }
+
+        #nome{
+            border-radius: 20px;
+            background: #59A5CC;
+            text-align: center;
+        }
+
+        #idade{
+            border-radius: 20px;
+            background: #59A5CC;
+            text-align: center;
+        }
+
+        #enviar{
+            border-radius: 20px;
+            background: #283D88;
+            width: 170px;
+            height: 50px;
+            top: 575px;
+            left: 365.19px;
+        }
+
+        #voltar{
+            width: 170px;
+            height: 50px;
+            left: 680.19px;
+            top: 575px;
+            border-radius: 20px;
+            background: #283D88;
+        }
+
+        body{
+            background-color: rgba(40, 61, 153, 0.3);
+        }
+
+        .rodape{
+            position: absolute;
+            width: 1703px;
+            height: 58.5px;
+            left: 0px;
+            top: 887.21px;
+            background: #283D88;
+        }
+
+        h4{
+            font-family: 'Roboto';
+            font-style: normal;
+            color: #26609E;
+            margin-left: -30px;
+        }
+
+            #resenha{
+
+            font-style: normal;
+            width: 200px;
+            margin-left: -30px;
+        }
+</style>
+
+    </head>
+<body>
+<?php
+  echo" <div class='cabecalho'><img src='img/ESfigma.png' id='ESfigma'>
+</div>
+    <div class='titulo'><h2>ATIVIDADES PROGRAMAÇÃO WEB<br>
+    EXERCÍCIO 2</h2><br>
+</div>
+    <div class='meio'>";
+    
+    $nm = $_POST['nome'];
+    $nota1 = $_POST['nota1Mat'];
+    $nota2 = $_POST['nota2Mat'];
+    $nota3 = $_POST['nota3Mat'];
+    $nota4 = $_POST['nota4Mat'];
+    $nota5 = $_POST['nota5Mat'];
+
+    $mediaNota = ($nota1 + $nota2 + $nota3 + $nota4 + $nota5) / 5;
+
+        //echo "Olá ".$nm. ", sua nota final é: ".$mediaNota;
+
+        if($mediaNota <= 4 == "I" ){
+            echo "<h4> Aluno $nm, sua média final é igual à I (".$mediaNota.")</h4><br><br>
+            <img src='img/f.jpg' id='resenha'><br><br>";
+        }
+        else if($mediaNota > 4 && $mediaNota <= 7 == "R" ){
+
+            echo "<h4> Aluno $nm, sua média final é igual à R (".$mediaNota.")</h4>
+            <img src='img/r.jpg' id='resenha'><br><br>";
+        }
+        else if($mediaNota > 8 && $mediaNota <= 9 == "B"){
+            echo "<h4>Aluno $nm, sua média final é igual à B (".$mediaNota.")</h4>
+            <img src='img/b.png' id='resenha'><br><br>";
+        }
+        else if($mediaNota > 9 && $mediaNota <= 10 == "MB"){
+            echo "<h4>Aluno $nm, sua média final é igual à MB  (".$mediaNota.")</h4>
+            <img src='img/mb.jpg' id='resenha'><br><br>";
+        }
+
+
+        echo "<form action='exe2.html' method='post'>
+            <input type='submit' value='VOLTAR' id='voltar'>
+    </form>
+    </div>
+     <div class='rodape'> <h5> Copyright © 2005-2022 by Refsnes Data. All Rights Reserved.<br>
+                            @2022 ETEAB™ﾠ &  Desenvolvido por FELIPE1501® </h5>
+</div>";
+?>
+</body>
+</html>  

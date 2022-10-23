@@ -77,7 +77,7 @@ include_once('../conexao.php');
                     </div>
                 </div>
                 <div class="input-group">
-                <div class="input-box">
+                    <div class="input-box">
                         <label for="cod">CÓDIGO</label>
                         <input type="text" id="cod" name="cod" placeholder="Digite seu primeiro nome" value="<?php echo $row['cd_funcionario'];?>" readonly="true">
                     </div>
@@ -103,7 +103,7 @@ include_once('../conexao.php');
 
                     <div class="input-box">
                         <label for="rg">RG</label>
-                        <input type="text" id="rg" name="rg" placeholder="Digite seu rg" value="<?php echo $row['nr_rg'];?>" required>
+                        <input type="text" id="rg" name="rg" placeholder="Digite seu rg" value="<?php echo $row['nr_cpf'];?>" required>
                     </div>
                     
                     <div class="input-box">
@@ -118,7 +118,7 @@ include_once('../conexao.php');
                     
                     <div class="input-box">
                         <label for="pais">SELECIONE SEU PAÍS</label>
-                        <select  id="exampleInputCountry" id="pais" name="country"  placeholder="Selecione seu país" required>
+                        <select  id="exampleInputCountry" id="pais"  name="country"  placeholder="Selecione seu país" required>
                             <option value="" selected="selected">Selecione um país</option>
                             <option value="United States">United States</option>
                             <option value="United Kingdom">United Kingdom</option>

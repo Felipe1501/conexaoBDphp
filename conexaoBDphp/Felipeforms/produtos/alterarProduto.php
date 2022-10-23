@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../assets/css/style.css">
-    <title>ALTERAR PRODUTO</title>
+    <title>CADASTRO PRODUTO</title>
     <style>
                 @media screen and (max-width: 1337px) {
     .form-img {
@@ -77,12 +77,6 @@ include_once('../conexao.php');
                     </div>
                 </div>
                 <div class="input-group">
-                <div class="input-box">
-                        <label for="cod">CÓDIGO</label>
-                        <input type="text" id="cod" name="cod"  value="<?php echo $row['cd_produto'];?>" readonly="true">
-                    </div>
-
-
                     <div class="input-box">
                         <label for="produto">NOME PRODUTO</label>
                         <input type="text" id="produto" name="produto" placeholder="Digite o nome do produto" value="<?php echo $row['nm_produto'];?>" required>

@@ -50,10 +50,6 @@
     </style>
 </head>
 <body>
-<?php
-
-include_once('../conexao.php');
-    ?>
     <div class="container">
         <div class="form-img">
             <img src="../assets/img/undraw_logistics_x-4-dc.svg" >
@@ -70,7 +66,7 @@ include_once('../conexao.php');
                 </div>
                 <div class="input-group">
                 <?php
-                    
+                    include_once('../conexao.php');
                     try{
                         $select = $connection->prepare('SELECT * FROM tb_produto');
                         $select->execute();
@@ -97,7 +93,7 @@ include_once('../conexao.php');
                         <button onclick="window.location.href='excluirProduto.php?id=<?php echo $row['cd_produto'];?>'">
                             Excluir
                         </button>
-	                    
+	                    <hr>
                         </div>
                         <?php
                         }

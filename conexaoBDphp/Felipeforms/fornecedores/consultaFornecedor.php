@@ -50,10 +50,6 @@
     </style>
 </head>
 <body>
-<?php
-
-include_once('../conexao.php');
-    ?>
     <div class="container">
         <div class="form-img">
             <img src="../assets/img/undraw_product_iteration_kjok.svg" >
@@ -70,7 +66,7 @@ include_once('../conexao.php');
                 </div>
                     <div class="input-group">
                     <?php
-                    
+                    include_once('../conexao.php');
                     try{
                         $select = $connection->prepare('SELECT * FROM tb_fornecedor');
                         $select->execute();
@@ -89,7 +85,7 @@ include_once('../conexao.php');
                             echo "<br><b>PAIS: </b>".$row['nm_pais'];
                             echo "<br><b>CELULAR: </b>".$row['nr_celular'];
                             echo "<br><b>EMAIL: </b>".$row['nm_email'];
-                            echo "<br><b>TIPO: </b>".$row['id_genero'];
+                            echo "<br><b>GÊNERO: </b>".$row['id_genero'];
                             echo "</p><br>";
                             ?>
                             <div class="login-button">
@@ -100,7 +96,7 @@ include_once('../conexao.php');
                         <button onclick="window.location.href='excluirFornecedor.php?id=<?php echo $row['cd_fornecedor'];?>'">
                             Excluir
                         </button>
-	                   
+	                    <hr>
                         </div>
                         <?php
                         }

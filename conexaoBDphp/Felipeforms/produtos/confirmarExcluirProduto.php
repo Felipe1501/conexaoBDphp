@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../assets/css/style.css">
-    <title>EXCLUIR PRODUTO</title>
+    <title>CADASTRO PRODUTO</title>
     <style>
         @media screen and (max-width: 1337px) {
     .form-img {

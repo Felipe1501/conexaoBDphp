@@ -77,12 +77,6 @@ include_once('../conexao.php');
                     </div>
                 </div>
                 <div class="input-group">
-                    
-                    <div class="input-box">
-                        <label for="cod">CÓDIGO</label>
-                        <input type="text" id="cod" name="cod" value="<?php echo $row['cd_fornecedor'];?>" readonly="true">
-                    </div>
-
                     <div class="input-box">
                         <label for="firstname">PRIMEIRO NOME</label>
                         <input type="text" id="firstname" name="firstname" placeholder="Digite seu primeiro nome" value="<?php echo $row['nm_primeiro'];?>"  required>

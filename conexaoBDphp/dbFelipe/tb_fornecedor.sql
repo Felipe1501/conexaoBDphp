@@ -6,7 +6,7 @@ create table tb_fornecedor (
     nm_empresa varchar(30) not null,
     tp_produto varchar(20) not null,
     nr_cep varchar(9) not null,
-    nr_endereco varchar(50) not null,
+    nr_endereco varchar(10) not null,
     nm_pais varchar(20) not null,
     nr_celular varchar(14) not null,
     nm_email varchar(40) not null,

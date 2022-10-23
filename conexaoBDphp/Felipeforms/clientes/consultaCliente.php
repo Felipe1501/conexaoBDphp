@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../assets/css/style.css">
-    <title>CONSULTA CLIENTE</title>
+    <title>CADASTRO CLIENTE</title>
     <style>
         @media screen and (max-width: 1337px) {
     .form-img {
@@ -50,10 +50,6 @@
     </style>
 </head>
 <body>
-    <?php
-
-include_once('../conexao.php');
-    ?>
     <div class="container">
         <div class="form-img">
             <img src="../assets/img/undraw_forms_re_pkrt.svg" >
@@ -70,6 +66,7 @@ include_once('../conexao.php');
                 </div>
                 <div class="input-group">
                 <?php
+                    include_once('../conexao.php');
                     try{
                         $select = $connection->prepare('SELECT * FROM tb_cliente');
                         $select->execute();
@@ -97,7 +94,7 @@ include_once('../conexao.php');
                         <button onclick="window.location.href='excluirCliente.php?id=<?php echo $row['cd_cliente'];?>'">
                             Excluir
                         </button>
-	                    
+	                    <hr>
                         <?php
                         }
                     }

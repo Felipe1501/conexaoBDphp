@@ -24,11 +24,11 @@
                 <div class="text-field">
                    
                     <label for="usuario">USUÁRIO</label>
-                    <input type="text" name="usuario" placeholder="USUÁRIO é Felipe1501 ou Admin">
+                    <input type="text" name="usuario" placeholder="USUÁRIO">
                 </div>
                 <div class="text-field">
                     <label for="senha">SENHA</label>
-                    <input type="password" name="senha" placeholder="SENHA é felipe1501 ou admin">
+                    <input type="password" name="senha" placeholder="SENHA">
                 </div>
                 <button class="btn-login" type="submit">LOGIN</button>
             </div>
