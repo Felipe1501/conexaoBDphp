@@ -103,7 +103,7 @@ include_once('../conexao.php');
 
                     <div class="input-box">
                         <label for="rg">RG</label>
-                        <input type="text" id="rg" name="rg" placeholder="Digite seu rg" value="<?php echo $row['nr_cpf'];?>" required>
+                        <input type="text" id="rg" name="rg" placeholder="Digite seu rg" value="<?php echo $row['nr_rg'];?>" required>
                     </div>
                     
                     <div class="input-box">

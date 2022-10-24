@@ -1,7 +1,7 @@
 <?php
 
 include_once('../conexao.php');
-
+$cod = $_POST['cod'];
 $primeironm = $_POST['firstname'];
 $sobrenome = $_POST['lastname'];
 $perfil = $_POST['perfil'];
@@ -16,30 +16,31 @@ $genero = $_POST['gender'];
 	try 
 	{
 
-		$stmt = $connection->prepare("UPDATE tb_usuario SET firstname = :primeironm,
-													  lastname = :sobrenome,
-													  perfil = :perfil,
-													  email = :email,
-                                                      endereco = :endereco,
-                                                      tel = :tel,
-													  usuario = :loginn,
-													  password = :senha,
-													  gender = :genero WHERE cd_usuario = :id");
+		$stmt = $connection->prepare("UPDATE tb_usuario SET nm_primeiro = :primeironm,
+													  nm_sobrenome = :sobrenome,
+													  id_perfil = :perfil,
+													  nm_email = :email,
+                                                      nr_endereco = :endereco,
+                                                      nr_celular = :tel,
+													  nm_usuario = :loginn,
+													  nm_senha = :senha,
+													  id_genero = :genero WHERE cd_usuario = :id");
 
-    $stmt->execute(array(
-        ':primeironm' => $primeironm,
-        ':sobrenome' => $sobrenome,
-        ':perfil' => $perfil,
-        ':email' => $email,
-        ':endereco' => $endereco,
-        ':tel' => $tel,
-        ':usuario' => $loginn,
-        ':password' => $senha,
-        ':gender' => $genero));
+$stmt->execute(array(
+	':id' => $cod,
+	':primeironm' => $primeironm,
+	':sobrenome' => $sobrenome,
+	':perfil' => $perfil,
+	':email' => $email,
+	':endereco' => $endereco,
+	':tel' => $tel,
+	':loginn' => $loginn,
+	':senha' => $senha,
+	':genero' => $genero));
 		
 		header( "refresh:0;url=consultaUsuario.php" );
 
-		echo "<script>alert('USUÁRIO ALTERADO COM SUCESSO');</script>";
+		echo "<script>alert('USUARIO ALTERADO COM SUCESSO');</script>";
 
 
 	} 

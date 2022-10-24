@@ -4,6 +4,7 @@
     $password = "usbw";
     $myDB = "dbfelipe";
 
+    global $connection;
 
     try{
         $connection = new PDO("mysql:host=$servername;dbname=$myDB", $username, $password);

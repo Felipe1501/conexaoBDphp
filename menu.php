@@ -2,7 +2,7 @@
     <head>
         <title>SISTEMA WEB 2.0 Felpe</title>
         <meta charset="UTF-8">
-        <link rel="shortcut icon" href="https://img2.gratispng.com/20180511/lwq/kisspng-question-mark-riddler-clip-art-5af5e89fe8baf2.2410554215260653119533.jpg" type="image/x-icon">
+        <link rel="shortcut icon" href="https://ovicio.com.br/wp-content/uploads/2022/09/20220927-ovicio-wolverine-deadpool-555x555.jpg" type="image/x-icon">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="conexaoBDphp/style.css">
         <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>

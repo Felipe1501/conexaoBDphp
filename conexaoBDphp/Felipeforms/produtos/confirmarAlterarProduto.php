@@ -2,7 +2,7 @@
 
 include_once('../conexao.php');
 
-
+$cod = $_POST['cod'];
 $nome = $_POST['produto'];
 $categoria = $_POST['categoria'];
 $valor = $_POST['valor'];
@@ -15,24 +15,25 @@ $produto = $_POST['gender'];
 	try 
 	{
 
-		$stmt = $connection->prepare("UPDATE tb_produto SET produto = :nome,
-													  categoria = :categoria,
-													  valor = :valor,
-													  quantidade = :quantidade,
-													  empresa = :emoresa,
-                                                      cnpj = :cnpj,
-                                                      email = :email,
-													  gender = :produto WHERE cd_produto = :id");
+		$stmt = $connection->prepare("UPDATE tb_produto SET nm_produto = :nome,
+													  nm_categoria = :categoria,
+													  vl_produto = :valor,
+													  qt_produto = :quantidade,
+													  nm_empresa = :empresa,
+                                                      nr_cnpj = :cnpj,
+                                                      nm_email = :email,
+													  id_produto = :produto WHERE cd_produto = :id");
 
 		$stmt->execute(array(
-							 ':produto' => $nome,
+							':id' => $cod,
+							':nome' => $nome,
 							 ':categoria' => $categoria,
 							 ':valor' => $valor,
 							 ':quantidade' => $quantidade,
 							 ':empresa' => $empresa,
 							 ':cnpj' => $cnpj,
 							 ':email' => $email,
-                             ':gender' => $produto));
+							 ':produto' => $produto));
 		
 		header( "refresh:0;url=consultaProduto.php" );
 

@@ -46,7 +46,7 @@ $genero = $_POST['gender'];
 		
 		header( "refresh:0;url=consultaFuncionario.php" );
 
-		echo "<script>alert('FUNCIONÁRIO ALTERADO COM SUCESSO');</script>";
+		echo "<script>alert('FUNCIONARIO ALTERADO COM SUCESSO');</script>";
 
 
 	} 

@@ -42,8 +42,8 @@
 
 	if(!empty($_POST))
 	{
-		$email = $_POST['usuario'];
-		$senha = $_POST['senha'];
+		$email = addslashes($_POST['usuario']);
+		$senha = addslashes($_POST['senha']);
 		
 		if(($email == "Admin")&&($senha == "Admin"))
 		{
