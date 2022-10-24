@@ -181,28 +181,28 @@
             <a href='https://www.youtube.com/channel/UCb18SXSEJTdiJ4qw1my_2Bw/null' id='link'> 
             SE INSCREVA NO CANAL ETEC STUDIOS CLICANDO NESTE LINK </a> 
 </div>
-        <div class='meiozin'><form action='/att1PWfelipe/aula03form.html' method='post'>
+        <div class='meiozin'><form action='/conexaoBDphp/felipe/htdocs/att1PWfelipe/aula03form.html' method='post'>
         <input type='submit' value='ATIVIDADE 1' id='att1'>
     </form>
-        <form action='/att1PWfelipe/exe2.html' method='post'>
+        <form action='/conexaoBDphp/felipe/htdocs/att1PWfelipe/exe2.html' method='post'>
             <input type='submit' value='ATIVIDADE 2' id='att2'>
     </form>
-        <form action='/att1PWfelipe/exe3.html' method='post'>
+        <form action='/conexaoBDphp/felipe/htdocs/att1PWfelipe/exe3.html' method='post'>
             <input type='submit' value='ATIVIDADE 3 e 4' id='att3e4'>
     </form>
         <img src='img/groot-happy-dance.gif' id='groot'>
 </div>
     <div class='right'>
-        <form action='/att1PWfelipe/exe5.html' method='post'>
+        <form action='/conexaoBDphp/felipe/htdocs/att1PWfelipe/exe5.html' method='post'>
             <input type='submit' value='ATIVIDADE 5' id='att5'>
     </form>
-        <form action='/att1PWfelipe/exe6.html' method='post'>
+        <form action='/conexaoBDphp/felipe/htdocs/att1PWfelipe/exe6.html' method='post'>
             <input type='submit' value='ATIVIDADE 6' id='att6'>
     </form>
-        <form action='/att1PWfelipe/exe7.html' method='post'>
+        <form action='/conexaoBDphp/felipe/htdocs/att1PWfelipe/exe7.html' method='post'>
             <input type='submit' value='ATIVIDADE 7' id='att7'>
     </form>
-        <form action='/att1PWfelipe/exe8.html' method='post'>
+        <form action='/conexaoBDphp/felipe/htdocs/att1PWfelipe/exe8.html' method='post'>
             <input type='submit' value='ATIVIDADE 8' id='att8'>
     </form>
 </div>
